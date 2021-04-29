@@ -1,0 +1,48 @@
+
+name: Release
+on:
+  schedule:
+    - cron: "5 */12 * * *"
+  push:
+    branches:
+      - "master"
+
+
+jobs:
+  Telegram:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Download Telegram
+      run: |
+        chmod +x build.sh
+        ./build.sh
+
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: telegram-continuous.AppImage
+        path: 'dist'
+
+    - name: Release
+      uses: marvinpinto/action-automatic-releases@latest
+      with:
+        title: Telegram AppImage ${{ env.TELEGRAM_VERSION }} Build
+        automatic_release_tag: ${{ env.TELEGRAM_VERSION }}
+        prerelease: false
+        files: |
+          dist/
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Release Continuous
+      uses: marvinpinto/action-automatic-releases@latest
+      with:
+        title: Telegram AppImage Continuous Build
+        automatic_release_tag: continuous
+        prerelease: true
+        files: |
+          dist/
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+
