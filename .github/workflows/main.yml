@@ -5,7 +5,7 @@ on:
     - cron: "5 */12 * * *"
   push:
     branches:
-      - "master"
+      - "main"
 
 
 jobs:
