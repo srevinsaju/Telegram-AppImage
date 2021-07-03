@@ -22,6 +22,6 @@ chmod +x *.AppImage
 echo "AppDir: $APPDIR"
 ls -al
 ls -al "$APPDIR"
-./appimagetool-x86_64.AppImage --comp gzip "$APPDIR" -n -u 'gh-releases-zsync|srevinsaju|Telegram-AppImage|continuous|Telegram*.AppImage.zsync'
+ARCH=x86_64 ./appimagetool-x86_64.AppImage --comp gzip "$APPDIR" -n -u 'gh-releases-zsync|srevinsaju|Telegram-AppImage|continuous|Telegram*.AppImage.zsync'
 mkdir dist
 mv Telegram*.AppImage* dist/.
