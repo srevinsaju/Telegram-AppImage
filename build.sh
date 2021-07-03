@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -u
+set -eux
 curl https://api.github.com/repos/telegramdesktop/tdesktop/releases > /tmp/telegram.json
 cat /tmp/telegram.json| jq '.[0].assets[].browser_download_url' | grep tsetup | grep tar
 wget "$(cat /tmp/telegram.json| jq -r '.[0].assets[].browser_download_url' | grep tsetup | grep tar)"
