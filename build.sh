@@ -2,6 +2,7 @@
 
 set -eux
 curl -i -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/telegramdesktop/tdesktop/releases > /tmp/telegram.json
+cat /tmp/telegram.json 
 cat /tmp/telegram.json| jq '.[0].assets[].browser_download_url' | grep tsetup | grep tar
 wget "$(cat /tmp/telegram.json| jq -r '.[0].assets[].browser_download_url' | grep tsetup | grep tar)"
 VERSION="$(cat /tmp/telegram.json| jq -r '.[0].tag_name')"
