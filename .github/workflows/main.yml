@@ -2,7 +2,7 @@
 name: Release
 on:
   schedule:
-    - cron: "5 */12 * * *"
+    - cron: "45 */12 * * *"
   push:
     branches:
       - "main"
