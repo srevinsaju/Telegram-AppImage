@@ -1,9 +1,16 @@
-<h1 align="center">
-	<img src="telegram.png" alt="Telegram" height=200 align="middle">
-	Telegram AppImage
-</h1>
+<p align="center">
+    <img src="telegram.png" alt="Telegram logo" width=128 height=128>
 
-Telegram Stable AppImages by GitHub Actions Continuous Integration
+<h2 align="center">Telegram AppImage</h2>
+
+  <p align="center">
+    Telegram Stable AppImages by GitHub Actions Continuous Integration
+    <br>
+    <a href="https://github.com/srevinsaju/Telegram-Appimage/issues/new">Report bug</a>
+    ·
+    <a href="https://github.com/srevinsaju/Telegram-Appimage/issues/new">Request feature</a>
+  </p>
+</p>
 
 ## Get Started
 
