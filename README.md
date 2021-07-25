@@ -9,6 +9,8 @@
     <a href="https://github.com/srevinsaju/Telegram-Appimage/issues/new">Report bug</a>
     ·
     <a href="https://github.com/srevinsaju/Telegram-Appimage/issues/new">Request feature</a>
+    ·
+    <a href="https://github.com/srevinsaju/Telegram-Appimage/releases/latest">Download AppImage</a>
   </p>
 </p>
 
@@ -19,6 +21,12 @@ Download the latest release from
 | Stable | 
 | ------- |
 | [Download](https://github.com/srevinsaju/Telegram-AppImage/releases/tag/continuous) |
+
+or, use [`zap`](https://github.com/srevinsaju/zap), the command line AppImage package manager:
+```bash
+zap install --github --from=srevinsaju/Telegram-AppImage telegram-appimage
+```
+
 
 ### Executing
 #### File Manager
